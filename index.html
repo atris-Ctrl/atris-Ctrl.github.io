@@ -1,64 +1,86 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Atris' Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- link to fontawesome which is for the icons on the webpage -->
     <script src="https://kit.fontawesome.com/e98a73a178.js" crossorigin="anonymous"></script>
+    <title>atris' log</title>
+    <script src="tabs.js"></script>
 </head>
 
 <body>
-    <section class="section">
-        <div class="hero container">
-            <nav class="navbar">
-                <div class="container">
-                    <div class="navbar-brand">
-                        <div class="navbar-item">
-                            <p class="subtitle"><strong>Atris</strong></p>
-                        </div>
-                        <span class="navbar-burger" data-target="navbarMenuHeroA">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </span>
-                    </div>
-                    <div id="navbarMenuHeroA" class="navbar-menu">
-                        <div class="navbar-end">
-                            <a href="index.html" class="navbar-item is-active">Home</a>
-                            <a href="school.html" class="navbar-item">School</a>
-                            <a href="activities.html" class="navbar-item">Activities</a>
-                            <a href="projects.html" class="navbar-item">Projects</a>
-                            <a href="contact.html" class="navbar-item">Contact</a>
-                        </div>
-                    </div>
+    <div class="container">
+        <header>
+            <h1>Hello, I'm Atris Yeung</h1>
+        </header>
+        <main>
+            <div class="navbar">
+                <p class="nav-content">atris' log</p>
+            </div>
+            <div class="horizontal-sections">
+                <div class="section section-about" id="about-me">
+                    <h2>About Me</h2>
+                    <img src="img/example.png" class="icon" alt="">
+                    <p id="title">Computer Science Student | Aspiring Tech Enthusiast</p>
+        
+                    <p>I'm a computer science student at the University of Nottingham with a passion for both drawing
+                        and programming. I enjoy combining my creative and technical skills to create innovative
+                        solutions.</p>
+                    <p>Linkedin
+                        <i class="fab fa-linkedin"></i>
+        
+                        : <a href="">Atris Yeung</a>
+                    </p>
+                    <p>Github
+                        <i class="fab fa-github"></i>
+                        : <a href="https://github.com/atris-Ctrl">@atris-Ctrl</a>
+                    </p>
                 </div>
-            </nav>
-    </section>
-    <section class="section is-medium">
-        <h1 class="title is-size-1"> I am Atris, Ka Ki Yeung
-        </h1>
-        <h2 class="subtitle is-size-3">
-            A first year Computer Science Student in University of Nottingham.
-        </h2>
-    </section>
-    </div>
-    </section>
-</body>
+                <div class="section section-projects">
+                    <div class="tabs">
+                        <button class="tab-button active" id="projects-tab" onclick="showTab('projects')">Projects</button>
+                        <button class="tab-button" id='skills-tab' onclick="showTab('skills')">Skills</button>
+                        <button class="tab-button" id='blog-tab' onclick="showTab('blog')">Blog</button>
+                        <button class="tab-button" id='others-tab' onclick="showTab('others')">Others</button>
+        
+                    </div>
+                    <div id="projects" class="tab-content">
+                        <h2>My Projects</h2>
+                        <p>Check out some of the exciting projects I've been working on in the technology field. From coding
+                            challenges to personal experiments, I'm always eager to learn and innovate.
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </p>
+                    </div>
+                <div id="skills" class="tab-content" style="display: none;">
+                    <h2>hello</h2>
+                    <p>Check out some of the exciting projects I've been working on in the technology field. From coding
+                        challenges to personal experiments, I'm always eager to learn and innovate.</p>
+                </div>
+                        <div id="blog" class="tab-content" style="display: none;">
+                            <h2>Blog</h2>
+                            <p>Other than computer science field...</p>
+                        </div>
+                <div id="others" class="tab-content" style="display: none;">
+                    <h2>Others</h2>
+                    <p>Other than computer science field...</p>
+                </div>
+                </div>
+            </div>
+            </main>
 <footer>
     <div class="hero-foot content has-text-centered">
         <p>
-            Made with <i class="fa-solid fa-heart"></i> by Atris
+            Made with ❤ by Atris
         </p>
         <span class="icon">
-            <i class="fab fa-github"></i>
         </span>
-        <i class="fa-brands fa-linkedin-in"></i>
     </div>
 
 </footer>
+    </div>
+    </body>
 
 </html>
