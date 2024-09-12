@@ -32,11 +32,21 @@ function typeText(element, text, delay = 100) {
 
 function toggle(parentID) {
   var parent = document.getElementById(parentID);
-  console.log("d");
   var child = parent.nextElementSibling;
   if (child.style.display === "none") {
     child.style.display = "block";
   } else {
     child.style.display = "none";
+  }
+}
+
+
+function closeAbout() {
+  var about = document.getElementById('about-me');
+  if (about.style.display === "none") {
+    about.style.display = "block";
+  }
+  else {
+    about.style.display = "none";
   }
 }

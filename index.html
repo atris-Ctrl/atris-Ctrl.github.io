@@ -14,16 +14,16 @@
     <div class="container">
         <main>
             <div class="navbar">
-                <p class="nav-content">atris' log</p>
+                <p class="nav-content">atris' log <i onclick="closeAbout()" class="fa-solid fa-user"></i></p>
             </div>
             <div class="horizontal-sections">
                 <div class="section section-about" id="about-me">
-                    <h2>About Me <i class="fa-solid fa-xmark"></i></h2>
+                    <h2>About Me <i onclick="closeAbout()" class="fa-solid fa-xmark"></i></h2>
                     
                     <img src="img/example.png" class="icon center" alt="">
                     <p id="title">Computer Science Graduate | Aspiring Tech Enthusiast</p>
         
-                    <p>I'm a computer science graduate at the University of Nottingham in 2024 with a passion for both drawing
+                    <p>I'm Atris Yeung, a computer science graduate at the University of Nottingham in 2024 with a passion for both drawing
                         and programming. I enjoy combining my creative and technical skills to create innovative
                         solutions.</p>
                     <p>Linkedin
@@ -36,160 +36,165 @@
                         : <a href="https://github.com/atris-Ctrl">@atris-Ctrl</a>
                     </p>
                 </div>
-                <div class="section section-projects">
+                <div class="section section-details">
                     <div class="tabs">
-                        <button class="tab-button active" id="projects-tab" onclick="showTab('projects')">Projects</button>
-                        <button class="tab-button" id='skills-tab' onclick="showTab('skills')">Skills</button>
-                        <button class="tab-button" id='blog-tab' onclick="showTab('blog')">Education</button>
-                        <button class="tab-button" id='others-tab' onclick="showTab('others')">Others</button>
-        
-                        
+                            <button class="tab-button active" id="projects-tab" onclick="showTab('projects')">Projects</button>
+                            <button class="tab-button" id='skills-tab' onclick="showTab('skills')">Skills</button>
+                            <button class="tab-button" id='blog-tab' onclick="showTab('blog')">Education</button>
+                            <button class="tab-button" id='others-tab' onclick="showTab('others')">Others</button>
                     </div>
-                    <div id="projects" class="tab-content">
-                        <h2>My Projects</h2>
-                        <p>Check out some of the exciting projects I've been working on in the technology field.
+                    <div id="projects" class="tab-content ">
+                        <div class="tab-project">
+                                <h2>My Projects</h2>
+                                <p>Check out some of the exciting projects I've been working on in the technology field. >_0</p>
+                                <h3 class="tab-title" id="project-0" onclick="toggle('project-0')"> # Flower Segmentation by Deep Learning <i class="fa-solid fa-up-right-and-down-left-from-center"></i></h3>
+                                <div class="tab-description ">
+                                    <p class="tab-project-tool">
+                                        Tool(s) Used: Matlab // Year 2024
+                                    </p>
+                                    <p class = "project-description"> Flower image segmentation presents a unique challenge due to the complexity of their shapes and colors. 
+                                        I explored two approaches for this task: transfer learning and constructing a deep learning model from scratch using a U-Net architecture. My goal was to accurately segment flowers from their backgrounds by training on the Oxford Flower dataset.
+                                        I employed transfer learning with pre-trained models such as DeepLab v3+ and GoogLeNet.
+                                        MATLAB made this process convenient, offering built-in models and an easy-to-use preview of the architecture. However, a significant challenge I faced was the training time, primarily due to the limitations of my laptop’s processing power. I was unable to train models with more than three 
+                                        layers efficiently. Here are some of my results. </p>
+                                    <div class="grid-container center">
+                                        <div class="grid-item ">
+                                            <img src="img/segDeepbest.jpg" alt="U-net architecture">
+                                            <i>Best performing images</i>
+                                        </div>
+                                        <div class="grid-item ">
+                                            <img  src="img/segdeepworst.jpg" alt="U-net architecture">
+                                            <i>Worst performing images</i>
+                                        </div>
+                                        <div class="grid-item " id="item-1">
+                                            <img  src="img/architecture.jpg" alt="U-net architecture">
+                                            <i>Architecture of U-net</i>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="tab-project">
+                                <h3 class="tab-title" id="project-1" onclick="toggle('project-1')"> # GeoFence Tracker <i class="fa-solid fa-up-right-and-down-left-from-center"></i></h3>
+                                <div class="tab-description hidden">
+                                    <p class="tab-project-tool">
+                                        Tool(s) Used: Andriod Studio, Java // Year 2023
+                                    </p>
+                                    <a href="https://github.com/atris-Ctrl/GeoTracker">Github Repo Link</a>
+                                    <p class = "project-description"> A simple application that allows users 
+                                        to track their walking path, record their steps, mark locations using 
+                                        Google map API. It also features a statistics section where users can 
+                                        view their walking trends, 
+                                        with tracking available even when the app is not open. </section></p>
+                                        <div class="grid-container center">
+                                            <div class="grid-item ">
+                                                <i></i>
+                                            </div>
+                                            <div class="grid-item ">
+                                                <i></i>
+                                            </div>
+                                        </div>
+                                </div>
+                        </div>
+                        <div class="tab-project">
+                                <h3 class="tab-title" id="project-2" onclick="toggle('project-2')"> # Cooking Recipe Chatbot - Granny <i class="fa-solid fa-up-right-and-down-left-from-center"></i></h3>
+                                <div class="tab-description hidden">
+                                <p class="tab-project-tool">
+                                    Tool(s) Used: Python // Year 2023
+                                </p>
+                                <p class = "project-description">  
+                                    Sometimes it is hard to decide what to eat so I created a recipe chatbot system 
+                                    called Granny has various feature with Identity Management for handling user names, 
+                                    Recipe Provision for suggesting detailed recipes, Question Answering using a comprehensive
+                                     dataset and Small Talk for engaging in casual conversation. The system preprocesses user 
+                                     queries by tokenizing, standardizing, and stemming text to improve understanding. 
+                                     It uses TF-IDF and an MLP Classifier with NLTK python packages for accurate intent detection, 
+                                    asking for user clarification if confidence is low. 
+                                </p>
+                                    <div class="grid-container center">
+                                        <div class="grid-item ">
+                                            <i>Best performing images</i>
+                                        </div>
+                                        <div class="grid-item ">
+                                            <i>Worst performing images</i>
+                                        </div>
+                                
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="tab-project">
+                            <h3 class="tab-title" id="project-3" onclick="toggle('project-3')"> # Dancing Game - Dance For Me <i class="fa-solid fa-up-right-and-down-left-from-center"></i></h3>
+                            <div class="tab-description hidden">
+                                <p class="tab-project-tool">
+                                        Tool(s) Used: Unity, C# ,Python // Year 2022
+                                </p>
+                                <a href="https://github.com/DelBoiTeam14/DanceForMe">Github Repo Link</a>
+                                <p class = "project-description">  Dance for Me is a group project and an interactive AR game
+                                        where players copy our character Dellboi, a 3D model's dance moves and get instant feedback using Mediapipe. 
+                                        It's designed to get desk-bound computer scientists up and moving in University of Nottingham. I worked as a front-end lead :>!
+                                        </section></p>
+                                        <div class="grid-container center">
+                                            <div class="grid-item ">
+                                            <img src="img/dfm1.png" alt="">
+                                                <i>Starting Scene with different goofy dance to welcome people to play</i>
+                                            </div>
+                                            <div class="grid-item ">
+                                                <img src="img/dfm2.png" alt="">
+
+                                                <i>Song Selection Scene with various choregraphies</i>
+                                            </div>
+                                    
+                                        </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div id="skills" class="tab-content hidden">
+                        <h2>hello</h2>
+                        <p>Check out some of the exciting projects I've been working on in the technology field. From coding
+                            challenges to personal experiments, I'm always eager to learn and innovate.</p>
+                    </div>
+                    <div id="blog" class="tab-content hidden">
+                        <h2>Education</h2>
+                        <p>I graduated in University of Nottingham and I joined as one of the OPAD member and actively participant in it :)!
+                            I was a member in 
+
+
                         </p>
-                        <div class="tab-project">
-                            <h3 class="tab-title" id="project-0" onclick="toggle('project-0')"> # Flower Segmentation by Deep Learning</h3>
-                            <div class="tab-description hidden">
-                            <p class="tab-project-tool">
-                                Tool(s) Used: Matlab // Year 2024
-                            </p>
-                            <p class = "project-description"> Flower image segmentation presents a unique challenge due to the complexity of their shapes and colors. 
-                                I explored two approaches for this task: transfer learning and constructing a deep learning model from scratch using a U-Net architecture. My goal was to accurately segment flowers from their backgrounds by training on the Oxford Flower dataset.
-                                I employed transfer learning with pre-trained models such as DeepLab v3+ and GoogLeNet.
-                                 MATLAB made this process convenient, offering built-in models and an easy-to-use preview of the architecture. However, a significant challenge I faced was the training time, primarily due to the limitations of my laptop’s processing power. I was unable to train models with more than three 
-                                layers efficiently. Here are some of my results. </p>
-                                <div class="grid-container center">
-                                    <div class="grid-item ">
-                                        <img src="img/segDeepbest.jpg" alt="U-net architecture">
-                                        <i>Best performing images</i>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <img  src="img/segdeepworst.jpg" alt="U-net architecture">
-                                        <i>Worst performing images</i>
-                                    </div>
-
-                                    <div class="grid-item " id="item-1">
-                                        <img  src="img/architecture.jpg" alt="U-net architecture">
-                                        <i>Architecture of U-net</i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-project">
-                            <h3 class="tab-title" id="project-1" onclick="toggle('project-1')"> # GeoFence Tracker </h3>
-                            <div class="tab-description hidden">
-                            <p class="tab-project-tool">
-                                Tool(s) Used: Andriod Studio, Java // Year 2023
-                            </p>
-                            <a href="https://github.com/atris-Ctrl/GeoTracker">Github Repo Link</a>
-                            <p class = "project-description"> A simple application that allows users 
-                                to track their walking path, record their steps, mark locations using 
-                                Google map API. It also features a statistics section where users can 
-                                view their walking trends, 
-                                with tracking available even when the app is not open. </section></p>
-                                <div class="grid-container center">
-                                    <div class="grid-item ">
-                                        <i>Best performing images</i>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <i>Worst performing images</i>
-                                    </div>
-                              
-                                </div>
-                            </div>
-                        </div>
-
-
-                            
-
-                        <div class="tab-project">
-                            <h3 class="tab-title" id="project-2" onclick="toggle('project-2')"> # Cooking Recipe Chatbot </h3>
-                            <div class="tab-description hidden">
-                            <p class="tab-project-tool">
-                                Tool(s) Used: Python // Year 2023
-                            </p>
-                            <p class = "project-description">  </section></p>
-                                <div class="grid-container center">
-                                    <div class="grid-item ">
-                                        <i>Best performing images</i>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <i>Worst performing images</i>
-                                    </div>
-                              
-                                </div>
-                        </div>
                     </div>
-                        
+                    <div id="others" class="tab-content hidden">
+                        <h2>Others</h2>
+                        <p>Other than sitting in front of computer ...</p>
                         <div class="tab-project">
-                            <h3 class="tab-title" id="project-3" onclick="toggle('project-3')"> # Dancing Game - Dance For Me </h3>
+                            <h3 class="tab-title" id="others-1" onclick="toggle('others-1')"> # Crocheting ❤ </h3>
                             <div class="tab-description">
-                            <p class="tab-project-tool">
-                                Tool(s) Used: Unity, C# ,Python // Year 2022
+                            <p>
+                            Crocheting is my recent hobby as I was finding my way to train my patience and make clothes for my plushies, sometimes it is quite irritating 
+                            when I lost my count but what an achievement when finished! 
                             </p>
-                            <a href="https://github.com/DelBoiTeam14/DanceForMe">Github Repo Link</a>
-                            <p class = "project-description">  Dance for Me is a group project and an interactive AR game
-                                 where players copy 3D model dance moves and get instant feedback using Mediapipe. 
-                                It's designed to get desk-bound computer scientists up and moving in University of Nottingham. I worked as a front-end lead :>!
-                                  </section></p>
-                                <div class="grid-container center">
-                                    <div class="grid-item ">
-                                        <i>Best performing images</i>
-                                    </div>
-                                    <div class="grid-item ">
-                                        <i>Worst performing images</i>
-                                    </div>
-                              
-                                </div>
                         </div>
-                    </div>
-                    </div>
-                <div id="skills" class="tab-content" style="display: none;">
-                    <h2>hello</h2>
-                    <p>Check out some of the exciting projects I've been working on in the technology field. From coding
-                        challenges to personal experiments, I'm always eager to learn and innovate.</p>
-                </div>
-                <div id="blog" class="tab-content" style="display: none;">
-                    <h2>Education</h2>
-                    <p>I graduated in University of Nottingham, here are some courses I studied.</p>
-                </div>
-                <div id="others" class="tab-content" style="display: none;">
-                    <h2>Others</h2>
-                    <p>Other than sitting in front of computer ...</p>
-                    <div class="tab-project">
-                        <h3 class="tab-title" id="others-1" onclick="toggle('others-1')"> # Crocheting ❤ </h3>
-                        <div class="tab-description">
-                        <p>
-                           Crocheting is my recent hobby as I was finding my way to train my patience and make clothes for my plushies, sometimes it is quite irritating 
-                           when I lost my count but what an achievement when finished! 
-                        </p>
-                    </div>
-                    <div class="tab-project">
-                        <h3 class="tab-title" id="others-2" onclick="toggle('others-2')"> # Drawing ❤</h3>
-                        <div class="tab-description">
-                        <p>
-                            I have always loved drawing since I was small. It helps me express my feelings (I remember always writing this sentence in my English assignments, but it's true!). Growing up made me stop drawing for a while, 
-                            but now I've picked up my pen again. I even opened an Instagram account to share some of the cartoon characters I draw!
-                        </p>
-                    </div>
+                        <div class="tab-project">
+                            <h3 class="tab-title" id="others-2" onclick="toggle('others-2')"> # Drawing ❤</h3>
+                            <div class="tab-description">
+                            <p>
+                                I have always loved drawing since I was small. It helps me express my feelings (I remember always writing this sentence in my English assignments, but it's true!). Growing up made me stop drawing for a while, 
+                                but now I've picked up my pen again. I even opened an Instagram account to share some of the cartoon characters I draw!
+                            </p>
+                        </div>
 
-                </div>
+                    </div>
+                    </div>
                 </div>
             </div>
+        </div>
+           
             </main>
-<footer>
-    <div class=" navbar">
-        <p class="nav-content center">
-            Made with ❤ by Atris
-        </p>
-        <span class="icon">
-        </span>
-    </div>
-
-</footer>
-    </div>
+       
     </body>
-
+    <footer>
+            <p class="nav-content">
+                Made with ❤ by Atris
+            </p>
+            <span class="icon">
+            </span>
+    
+    </footer> 
 </html>
